@@ -38,8 +38,8 @@ systemctl enable --now juicity
 | 配置 | **/root/juicity_config.json** |
 | 重启 | `systemctl restart juicity` |
 | 状态 | `systemctl status juicity` |
-| 查看日志 | `journalctl -u juicity --output cat -e` |
-| 实时日志 | `journalctl -u juicity --output cat -f` |
+| 查看日志 | `journalctl -u juicity -o cat -e` |
+| 实时日志 | `journalctl -u juicity -o cat -f` |
 
 ### 卸载
 
