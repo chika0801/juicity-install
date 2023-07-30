@@ -11,11 +11,21 @@ go version
 apt install -y git make
 ```
 
-首次编译
 ```
 git clone https://github.com/juicity/juicity
 cd juicity
-make CGO_ENABLED=0 juicity-server
-make juicity-client
-cd ..
 ```
+
+**linux-amd64 服务端**
+
+```
+make CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOAMD64=v2 juicity-server
+```
+
+**windows-amd64 客户端**
+
+```
+make CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GOAMD64=v3 juicity-client
+```
+
+[About GOAMD64](https://github.com/golang/go/wiki/MinimumRequirements#amd64)
