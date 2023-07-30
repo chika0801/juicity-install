@@ -25,7 +25,7 @@ make CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOAMD64=v2 juicity-server
 **windows-amd64 客户端**
 
 ```
-make CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GOAMD64=v3 juicity-client
+make CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GOAMD64=v3 juicity-client.exe
 ```
 
 [About GOAMD64](https://github.com/golang/go/wiki/MinimumRequirements#amd64)
