@@ -7,7 +7,7 @@
 1. 下载程序（**linux-amd64**）
 
 ```
-curl -Lo /root/tuic https://github.com/EAimTY/tuic/releases/download/tuic-server-1.0.0/tuic-server-1.0.0-x86_64-unknown-linux-gnu && chmod +x /root/tuic && mv -f /root/tuic /usr/local/bin
+curl -Lo /root/juicity.zip https://github.com/juicity/juicity/releases/latest/download/juicity-linux-x86_64.zip && unzip /root/juicity.zip -d /root/juicity && chmod +x /root/juicity/juicity-server && mv -f /root/juicity/juicity-server /usr/local/bin/juicity && rm -rf /root/juicity.zip /root/juicity
 ```
 
 2. 下载配置
