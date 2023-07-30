@@ -59,17 +59,7 @@ rm -f /usr/local/bin/juicity /root/juicity_config.json /etc/systemd/system/juici
 2. 参考[客户端配置](https://github.com/chika0801/juicity-install/blob/main/config_client.json)示例，修改chika.example.com为证书中包含的域名，修改10.0.0.1为VPS的IP，将文件名改为 **config.json**，与 **juicity.exe**，批处理文件放在同一文件夹里。
 3. 运行批处理文件。
 
-### 由 v2rayN 提供 HTTP SOCKS5 代理
-
-1. 下载Windows客户端程序[juicity-windows-x86_64.zip](https://github.com/juicity/juicity/releases/latest/download/juicity-windows-x86_64.zip)，重命名为tuic.exe，复制到v2rayN\bin\tuic文件夹。
-
-2. 下载客户端配置[config_client.json]()，
-
-3. 服务器 ——> 添加自定义配置服务器 ——> 浏览 ——> 选择客户端配置 ——> Core类型 tuic ——> Socks端口 50000
-
-![TUIC](https://github.com/chika0801/tuic-install/assets/88967758/00bcbfd2-e24d-4187-aeb9-e2afefab219d)
-
-### 由 sing-box 提供 Tun 模式（透明代理），v2rayN 管理配置
+### 由 sing-box 提供 Tun 模式（透明代理）
 
 1. sing-box：参考 [sing-box Windows 客户端使用方法](https://github.com/chika0801/sing-box-examples/blob/main/Tun/README.md)，将 [sing-box Windows 客户端配置](https://github.com/chika0801/sing-box-examples/blob/main/Tun/config_client_windows.json) 进行如下修改。
 
