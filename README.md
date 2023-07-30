@@ -56,7 +56,7 @@ rm -f /usr/local/bin/juicity /root/juicity_config.json /etc/systemd/system/juici
 ### Windows 客户端使用方法：
 
 1. 下载Windows客户端程序[juicity-windows-x86_64.zip](https://github.com/juicity/juicity/releases/latest/download/juicity-windows-x86_64.zip)，重命名为juicity.exe。
-2. 新建一个批处理文件，内容为 `start /min juicity-client.exe run -c config.json`。
+2. 新建一个批处理文件，内容为 `start /min juicity.exe run -c config.json`。
 3. 参考[客户端配置](https://github.com/chika0801/juicity-install/blob/main/config_client.json)示例，修改chika.example.com为证书中包含的域名，修改10.0.0.1为VPS的IP，将文件名改为 **config.json**，与 **juicity.exe**，批处理文件放在同一文件夹里。
 4. 运行批处理文件。
 
