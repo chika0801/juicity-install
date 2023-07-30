@@ -1,0 +1,10 @@
+{
+    "listen": ":443",
+    "users": {
+        "ee48f7be-6ae9-5654-9b61-8466aa8e16bc": "chika"
+    },
+    "certificate": "/root/fullchain.cer",
+    "private_key": "/root/private.key",
+    "congestion_control": "bbr",
+    "log_level": "info"
+}
