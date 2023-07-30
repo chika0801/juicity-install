@@ -1,4 +1,4 @@
-# [juicity](https://github.com/juicity/juicity) 安装指南
+# [Juicity](https://github.com/juicity/juicity) 安装指南
 
 ## 服务端
 
