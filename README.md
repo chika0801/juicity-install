@@ -7,7 +7,7 @@
 1. 下载程序（**linux-amd64**）
 
 ```
-curl -Lo /root/juicity.zip https://github.com/juicity/juicity/releases/latest/download/juicity-linux-x86_64.zip && unzip -q /root/juicity.zip -d /root/juicity && chmod +x /root/juicity/juicity-server && mv -f /root/juicity/juicity-server /usr/local/bin/juicity && rm -rf /root/juicity.zip /root/juicity
+curl -Lo /root/juicity.zip https://github.com/juicity/juicity/releases/latest/download/juicity-linux-x86_64.zip && apt install -y unzip && unzip -q /root/juicity.zip -d /root/juicity && chmod +x /root/juicity/juicity-server && mv -f /root/juicity/juicity-server /usr/local/bin/juicity && rm -rf /root/juicity.zip /root/juicity
 ```
 
 2. 下载配置
