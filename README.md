@@ -53,7 +53,7 @@ rm -f /usr/local/bin/juicity /root/juicity_config.json /etc/systemd/system/juici
 
 ## 客户端
 
-### Windows 客户端使用方法：（HTTP SOCKS5 代理）
+### Windows 使用方法：（HTTP SOCKS5 代理）
 
 1. 下载Windows客户端程序[juicity-windows-x86_64.zip](https://github.com/juicity/juicity/releases/latest/download/juicity-windows-x86_64.zip)，将juicity-client.exe重命名为juicity.exe。
 2. 新建一个批处理文件，内容为 `start /min juicity.exe run -c config.json`。
