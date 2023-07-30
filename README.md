@@ -80,5 +80,3 @@ rm -f /usr/local/bin/juicity /root/juicity_config.json /etc/systemd/system/juici
             "server_port": 50000
         },
 ```
-
-2. v2rayN：参考 由 v2rayN 提供 http/socks5 代理。服务器 ——> 添加自定义配置服务器 ——> 浏览 ——> 选择客户端配置 ——> Core类型 tuic ——> Socks端口 0。
