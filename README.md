@@ -19,7 +19,7 @@ curl -Lo /root/juicity_config.json https://raw.githubusercontent.com/chika0801/j
 3. 下载systemctl配置
 
 ```
-curl -Lo /etc/systemd/system/tuic.service https://raw.githubusercontent.com/chika0801/tuic-install/main/tuic.service && systemctl daemon-reload
+curl -Lo /etc/systemd/system/juicity.service https://raw.githubusercontent.com/chika0801/juicity-install/main/juicity.service && systemctl daemon-reload
 ```
 
 4. 上传证书和私钥
