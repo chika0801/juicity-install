@@ -29,26 +29,26 @@ curl -Lo /etc/systemd/system/juicity.service https://raw.githubusercontent.com/c
 5. 启动程序
 
 ```
-systemctl enable --now tuic
+systemctl enable --now juicity
 ```
 
 | 项目 | |
 | :--- | :--- |
-| 程序 | **/usr/local/bin/tuic** |
-| 配置 | **/root/tuic_config.json** |
-| 重启 | `systemctl restart tuic` |
-| 状态 | `systemctl status tuic` |
-| 查看日志 | `journalctl -u tuic --output cat -e` |
-| 实时日志 | `journalctl -u tuic --output cat -f` |
+| 程序 | **/usr/local/bin/juicity** |
+| 配置 | **/root/juicity_config.json** |
+| 重启 | `systemctl restart juicity` |
+| 状态 | `systemctl status juicity` |
+| 查看日志 | `journalctl -u juicity --output cat -e` |
+| 实时日志 | `journalctl -u juicity --output cat -f` |
 
 ### 卸载
 
 ```
-systemctl disable --now tuic
+systemctl disable --now juicity
 ```
 
 ```
-rm -f /usr/local/bin/tuic /root/tuic_config.json /etc/systemd/system/tuic.service
+rm -f /usr/local/bin/juicity /root/juicity_config.json /etc/systemd/system/juicity.service
 ```
 
 ## 客户端
