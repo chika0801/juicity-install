@@ -8,7 +8,7 @@ go version
 ```
 
 ```
-apt install -y git
+apt install -y git make
 ```
 
 首次编译
