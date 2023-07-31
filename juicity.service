@@ -6,6 +6,7 @@ User=root
 WorkingDirectory=/root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE CAP_NET_RAW
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE CAP_NET_RAW
+Environment=QUIC_GO_ENABLE_GSO=true
 ExecStart=/usr/local/bin/juicity run -c /root/juicity_config.json
 Restart=on-failure
 RestartSec=10
