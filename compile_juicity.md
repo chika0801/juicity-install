@@ -11,9 +11,18 @@ go version
 apt install -y git make
 ```
 
+首次编译
+
 ```
 git clone https://github.com/juicity/juicity
 cd juicity
+```
+
+再次编译
+
+```
+cd juicity
+git pull
 ```
 
 **linux-amd64 服务端**
