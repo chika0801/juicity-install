@@ -10,6 +10,8 @@
 curl -Lo /root/juicity.zip https://github.com/juicity/juicity/releases/latest/download/juicity-linux-x86_64.zip && unzip -q /root/juicity.zip -d /root/juicity && chmod +x /root/juicity/juicity-server && mv -f /root/juicity/juicity-server /usr/local/bin/juicity && rm -rf /root/juicity.zip /root/juicity
 ```
 
+- [编译程序](https://github.com/chika0801/juicity-install/blob/main/compile_juicity.md)
+
 2. 下载配置
 
 ```
