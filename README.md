@@ -46,11 +46,7 @@ systemctl enable --now juicity
 ### 卸载
 
 ```
-systemctl disable --now juicity
-```
-
-```
-rm -f /usr/local/bin/juicity /root/juicity_config.json /etc/systemd/system/juicity.service
+systemctl disable --now juicity && rm -f /usr/local/bin/juicity /root/juicity_config.json /etc/systemd/system/juicity.service
 ```
 
 ## 客户端
