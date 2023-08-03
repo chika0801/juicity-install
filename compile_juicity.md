@@ -27,6 +27,8 @@ cd juicity
 git pull
 ```
 
+编译命令
+
 **linux-amd64 服务端**
 
 ```
