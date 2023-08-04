@@ -68,7 +68,7 @@ start /min juicity.exe run -c config.json
 
 ### 由 sing-box 提供 Tun 模式（透明代理）
 
-1. sing-box：参考 [sing-box Windows 客户端使用方法](https://github.com/chika0801/sing-box-examples/blob/main/README.md)，将 [sing-box Windows 客户端配置](https://github.com/chika0801/sing-box-examples/blob/main/Tun/config_client_windows.json) 进行如下修改。
+1. sing-box：参考[Windows 使用方法](https://github.com/chika0801/sing-box-examples/blob/main/README.md)，将[客户端配置](https://github.com/chika0801/sing-box-examples/blob/main/Tun/config_client_windows.json)进行如下修改。
 
 原内容
 ```jsonc
