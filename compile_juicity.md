@@ -42,3 +42,19 @@ make CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GOAMD64=v3 juicity-client
 ```
 
 [About GOAMD64](https://github.com/golang/go/wiki/MinimumRequirements#amd64)
+
+复制文件
+
+**linux-amd64**
+
+```
+cp -f /root/juicity/juicity-server /usr/local/bin/juicity && chmod +x /usr/local/bin/juicity
+```
+
+
+
+**windows-amd64**
+
+```
+cp -f /root/juicity/juicity-client /root/juicity.exe
+```
