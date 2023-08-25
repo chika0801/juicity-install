@@ -14,14 +14,14 @@ go version
 apt install -y git make
 ```
 
-首次编译
+下载代码
 
 ```
 git clone https://github.com/juicity/juicity
 cd juicity
 ```
 
-再次编译
+更新代码
 
 ```
 cd juicity
@@ -51,8 +51,6 @@ make CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GOAMD64=v3 juicity-client
 ```
 cp -f /root/juicity/juicity-server /usr/local/bin/juicity && chmod +x /usr/local/bin/juicity
 ```
-
-
 
 **windows-amd64**
 
