@@ -10,6 +10,7 @@ Environment=QUIC_GO_ENABLE_GSO=true # GSO on-going suppor https://github.com/jui
 ExecStart=/usr/local/bin/juicity run -c /root/juicity_config.json
 Restart=on-failure
 RestartSec=10
+LimitNPROC=512
 LimitNOFILE=infinity
 
 [Install]
