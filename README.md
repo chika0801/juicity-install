@@ -4,13 +4,11 @@
 
 ### 安装
 
-1. 下载程序（**linux-amd64**）
+1. 下载程序（**linux-amd64**）或 [编译程序](https://github.com/chika0801/juicity-install/blob/main/compile_juicity.md)
 
 ```
 curl -Lo /root/juicity.zip https://github.com/juicity/juicity/releases/latest/download/juicity-linux-x86_64.zip && unzip -q /root/juicity.zip -d /root/tmp && chmod +x /root/tmp/juicity-server && mv -f /root/tmp/juicity-server /usr/local/bin/juicity && rm -r /root/juicity.zip /root/tmp
 ```
-
-- [编译程序](https://github.com/chika0801/juicity-install/blob/main/compile_juicity.md)
 
 2. 下载配置
 
