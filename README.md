@@ -62,7 +62,7 @@ start /min juicity-client.exe run -c config.json
 
 [GSO on-going suppor](https://github.com/juicity/juicity/discussions/42)
 
-3. 参考[客户端配置](config_client.json)示例，修改chika.example.com为证书中包含的域名，修改10.0.0.1为VPS的IP，将文件名改为 **config.json**，与 **juicity.exe**，批处理文件放在同一文件夹里。
+3. 参考[客户端配置](config_client.json)示例，修改chika.example.com为证书中包含的域名，修改10.0.0.1为VPS的IP，将文件名改为 **config.json**，与 **juicity-client.exe**，批处理文件放在同一文件夹里。
 4. 运行批处理文件。
 
 ### 由 sing-box 提供 Tun 模式（透明代理），由 sing-box 提供路由规则
