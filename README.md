@@ -14,7 +14,7 @@ curl -Lo juicity.zip https://github.com/juicity/juicity/releases/latest/download
 2. 下载配置
 
 ```
-curl -Lo /root/juicity_config.json https://raw.githubusercontent.com/chika0801/juicity-install/main/config_server.json
+curl -Lo /root/juicity-server_config.json https://raw.githubusercontent.com/chika0801/juicity-install/main/config_server.json
 ```
 
 3. 下载systemctl配置
