@@ -5,30 +5,25 @@
 ### 安装
 
 1. 下载程序（**linux-amd64**）或 [编译程序](compile_juicity.md)
-
 ```
 apt install -y unzip
 curl -Lo juicity.zip https://github.com/juicity/juicity/releases/latest/download/juicity-linux-x86_64.zip && unzip -q juicity.zip -d tmp && chmod +x tmp/juicity-server && cp -f tmp/juicity-server /usr/local/bin/ && rm -r juicity.zip tmp
 ```
 
 2. 下载配置
-
 ```
 curl -Lo /root/juicity-server_config.json https://raw.githubusercontent.com/chika0801/juicity-install/main/config_server.json
 ```
 
 3. 下载systemctl配置
-
 ```
 curl -Lo /etc/systemd/system/juicity-server.service https://raw.githubusercontent.com/chika0801/juicity-install/main/juicity-server.service && systemctl daemon-reload
 ```
 
 4. 上传证书和私钥
-
 - 将证书文件改名为 **fullchain.cer**，将私钥文件改名为 **private.key**，将它们上传到 **/root** 目录
 
 5. 启动程序
-
 ```
 systemctl enable --now juicity-server
 ```
@@ -59,7 +54,6 @@ systemctl disable --now juicity-server && rm -f /usr/local/bin/juicity-server /r
 set QUIC_GO_ENABLE_GSO=true
 start /min juicity-client.exe run -c config.json
 ```
-
 [GSO on-going suppor](https://github.com/juicity/juicity/discussions/42)
 
 3. 参考[客户端配置](config_client.json)示例，修改chika.example.com为证书中包含的域名，修改10.0.0.1为VPS的IP，将文件名改为 **config.json**，与 **juicity-client.exe**，批处理文件放在同一文件夹里。
