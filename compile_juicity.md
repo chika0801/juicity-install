@@ -17,7 +17,7 @@ apt install -y git make
 下载代码
 
 ```
-git clone https://github.com/juicity/juicity
+git clone https://github.com/juicity/juicity.git
 ```
 
 更新代码
