@@ -34,7 +34,7 @@ cd ..
 
 ```
 cd juicity
-export CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOAMD64=v2
+go env -w CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOAMD64=v2
 make juicity-server
 cd ..
 ```
@@ -43,7 +43,7 @@ cd ..
 
 ```
 cd juicity
-export CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GOAMD64=v3
+go env -w CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GOAMD64=v3
 make juicity-client
 cd ..
 ```
