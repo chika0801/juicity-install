@@ -52,12 +52,12 @@ systemctl disable --now juicity-server && rm -f /usr/local/bin/juicity-server /r
 
 ### Windows 使用方法：
 
-1. 下载Windows客户端程序[juicity-windows-x86_64.zip](https://github.com/juicity/juicity/releases/latest/download/juicity-windows-x86_64.zip)，将juicity-client.exe重命名为juicity.exe。
+1. 下载Windows客户端程序[juicity-windows-x86_64.zip](https://github.com/juicity/juicity/releases/latest/download/juicity-windows-x86_64.zip)。
 2. 新建一个批处理文件，内容为：
 
 ```
 set QUIC_GO_ENABLE_GSO=true
-start /min juicity.exe run -c config.json
+start /min juicity-client.exe run -c config.json
 ```
 
 [GSO on-going suppor](https://github.com/juicity/juicity/discussions/42)
