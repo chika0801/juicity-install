@@ -31,14 +31,14 @@ jobs:
       run: | 
         cd juicity
         export ${{ env.ENV_LINUX }}
-        go build -o juicity -trimpath -ldflags "-s -w -X github.com/juicity/juicity/config.Version=$(VERSION)" ./cmd/server
+        go build -o juicity-server -trimpath -ldflags "-s -w -X github.com/juicity/juicity/config.Version=$(VERSION)" ./cmd/server
         export ${{ env.ENV_WINDOWS }}
-        go build -o juicity.exe -trimpath -ldflags "-s -w -X github.com/juicity/juicity/config.Version=$(VERSION)" ./cmd/client
+        go build -o juicity-client.exe -trimpath -ldflags "-s -w -X github.com/juicity/juicity/config.Version=$(VERSION)" ./cmd/client
 
     - name: Upload files
       uses: actions/upload-artifact@v3
       with:
         name: juicity
         path: |
-          juicity/juicity
-          juicity/juicity.exe
+          juicity/juicity-server
+          juicity/juicity-client.exe
