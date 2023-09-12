@@ -30,9 +30,9 @@ jobs:
     - name: go build
       run: | 
         cd juicity
-        export ${{ env.ENV_LINUX }}
+        go env -w ${{ env.ENV_LINUX }}
         go build -o juicity-server -trimpath -ldflags "-s -w -X github.com/juicity/juicity/config.Version=$(VERSION)" ./cmd/server
-        export ${{ env.ENV_WINDOWS }}
+        go env -w ${{ env.ENV_WINDOWS }}
         go build -o juicity-client.exe -trimpath -ldflags "-s -w -X github.com/juicity/juicity/config.Version=$(VERSION)" ./cmd/client
 
     - name: Upload files
