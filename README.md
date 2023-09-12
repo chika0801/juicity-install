@@ -30,7 +30,7 @@ curl -Lo /etc/systemd/system/juicity-server.service https://raw.githubuserconten
 5. 启动程序
 
 ```
-systemctl enable --now juicity
+systemctl enable --now juicity-server
 ```
 
 | 项目 | |
@@ -45,7 +45,7 @@ systemctl enable --now juicity
 ### 卸载
 
 ```
-systemctl disable --now juicity && rm -f /usr/local/bin/juicity-server /root/juicity-server_config.json /etc/systemd/system/juicity-server.service
+systemctl disable --now juicity-server && rm -f /usr/local/bin/juicity-server /root/juicity-server_config.json /etc/systemd/system/juicity-server.service
 ```
 
 ## 客户端
