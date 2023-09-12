@@ -1,0 +1,44 @@
+name: juicity
+
+env:
+  ENV_LINUX: CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOAMD64=v2
+  ENV_WINDOWS: CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GOAMD64=v3
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.21.1'
+
+    - name: Show go env
+      run: go env
+
+    - name: git clone
+      run: |
+        git clone --depth 1 git clone https://github.com/juicity/juicity.git
+
+    - name: make
+      run: | 
+        cd juicity
+        export ${{ env.ENV_LINUX }}
+        make juicity-server
+        export ${{ env.ENV_WINDOWS }}
+        make juicity-client
+
+    - name: Upload files
+      uses: actions/upload-artifact@v3
+      with:
+        name: sing-box
+        path: |
+          juicity/juicity-server
+          juicity/juicity-client
