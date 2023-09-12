@@ -1,9 +1,9 @@
 准备环境
 
 ```
-curl -sLo go.tar.gz https://go.dev/dl/go1.21.0.linux-amd64.tar.gz
+curl -sLo go.tar.gz https://go.dev/dl/$(curl -sL https://golang.org/VERSION?m=text|head -1).linux-amd64.tar.gz
 rm -rf /usr/local/go
-tar -C /usr/local -xzf go.tar.gz
+tar -C /usr/local/ -xzf go.tar.gz
 rm go.tar.gz
 echo -e "export PATH=$PATH:/usr/local/go/bin" > /etc/profile.d/go.sh
 source /etc/profile.d/go.sh
@@ -18,7 +18,6 @@ apt install -y git make
 
 ```
 git clone https://github.com/juicity/juicity
-cd juicity
 ```
 
 更新代码
@@ -26,6 +25,7 @@ cd juicity
 ```
 cd juicity
 git pull
+cd ..
 ```
 
 编译命令
@@ -33,13 +33,19 @@ git pull
 **linux-amd64 服务端**
 
 ```
-make CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOAMD64=v2 juicity-server
+cd juicity
+export CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOAMD64=v2
+make juicity-server
+cd ..
 ```
 
 **windows-amd64 客户端**
 
 ```
-make CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GOAMD64=v3 juicity-client
+cd juicity
+export CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GOAMD64=v3
+make juicity-client
+cd ..
 ```
 
 [About GOAMD64](https://github.com/golang/go/wiki/MinimumRequirements#amd64)
@@ -49,11 +55,12 @@ make CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GOAMD64=v3 juicity-client
 **linux-amd64**
 
 ```
-cp -f /root/juicity/juicity-server /usr/local/bin/juicity && chmod +x /usr/local/bin/juicity
+cp -f juicity/juicity-server /usr/local/bin/juicity
+chmod +x /usr/local/bin/juicity
 ```
 
 **windows-amd64**
 
 ```
-cp -f /root/juicity/juicity-client /root/juicity.exe
+cp -f juicity/juicity-client ./juicity.exe
 ```
