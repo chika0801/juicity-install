@@ -7,7 +7,8 @@
 1. 下载程序（**linux-amd64**）或 [编译程序](compile_juicity.md)
 
 ```
-curl -Lo /root/juicity.zip https://github.com/juicity/juicity/releases/latest/download/juicity-linux-x86_64.zip && unzip -q /root/juicity.zip -d /root/tmp && chmod +x /root/tmp/juicity-server && mv -f /root/tmp/juicity-server /usr/local/bin/juicity && rm -r /root/juicity.zip /root/tmp
+apt install -y unzip
+curl -Lo juicity.zip https://github.com/juicity/juicity/releases/latest/download/juicity-linux-x86_64.zip && unzip -q juicity.zip -d tmp && chmod +x tmp/juicity-server && cp -f tmp/juicity-server /usr/local/bin/ && rm -r juicity.zip tmp
 ```
 
 2. 下载配置
@@ -19,7 +20,7 @@ curl -Lo /root/juicity_config.json https://raw.githubusercontent.com/chika0801/j
 3. 下载systemctl配置
 
 ```
-curl -Lo /etc/systemd/system/juicity.service https://raw.githubusercontent.com/chika0801/juicity-install/main/juicity.service && systemctl daemon-reload
+curl -Lo /etc/systemd/system/juicity-server.service https://raw.githubusercontent.com/chika0801/juicity-install/main/juicity-server.service && systemctl daemon-reload
 ```
 
 4. 上传证书和私钥
@@ -34,17 +35,17 @@ systemctl enable --now juicity
 
 | 项目 | |
 | :--- | :--- |
-| 程序 | **/usr/local/bin/juicity** |
-| 配置 | **/root/juicity_config.json** |
-| 重启 | `systemctl restart juicity` |
-| 状态 | `systemctl status juicity` |
-| 查看日志 | `journalctl -u juicity -o cat -e` |
-| 实时日志 | `journalctl -u juicity -o cat -f` |
+| 程序 | **/usr/local/bin/juicity-server** |
+| 配置 | **/root/juicity-server_config.json** |
+| 重启 | `systemctl restart juicity-server` |
+| 状态 | `systemctl status juicity-server` |
+| 查看日志 | `journalctl -u juicity-server -o cat -e` |
+| 实时日志 | `journalctl -u juicity-server -o cat -f` |
 
 ### 卸载
 
 ```
-systemctl disable --now juicity && rm -f /usr/local/bin/juicity /root/juicity_config.json /etc/systemd/system/juicity.service
+systemctl disable --now juicity && rm -f /usr/local/bin/juicity-server /root/juicity-server_config.json /etc/systemd/system/juicity-server.service
 ```
 
 ## 客户端
