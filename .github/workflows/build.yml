@@ -28,9 +28,10 @@ jobs:
       run: | 
         cd juicity
         go env -w ${{ env.ENV_LINUX }}
-        go build -o juicity-server -trimpath -ldflags "-s -w -X github.com/juicity/juicity/config.Version=$(VERSION)" ./cmd/server
+        make juicity-server
         go env -w ${{ env.ENV_WINDOWS }}
-        go build -o juicity-client.exe -trimpath -ldflags "-s -w -X github.com/juicity/juicity/config.Version=$(VERSION)" ./cmd/client
+        make juicity-client
+        mv juicity-client juicity-client.exe
 
     - name: Upload files
       uses: actions/upload-artifact@v3
