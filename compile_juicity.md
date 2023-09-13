@@ -55,8 +55,8 @@ cd ..
 **linux-amd64**
 
 ```
-cp -f juicity/juicity-server /usr/local/bin/juicity
-chmod +x /usr/local/bin/juicity
+cp -f juicity/juicity-server /usr/local/bin/
+chmod +x /usr/local/bin/juicity-server
 ```
 
 **windows-amd64**
