@@ -6,5 +6,6 @@
     "certificate": "/root/fullchain.cer",
     "private_key": "/root/private.key",
     "congestion_control": "bbr",
+    "disable_outbound_udp443": true,
     "log_level": "debug"
 }
