@@ -51,10 +51,8 @@ systemctl disable --now juicity-server && rm -f /usr/local/bin/juicity-server /r
 2. 新建一个批处理文件，内容为：
 
 ```
-set QUIC_GO_ENABLE_GSO=true
 start /min juicity-client.exe run -c config.json
 ```
-[GSO on-going suppor](https://github.com/juicity/juicity/discussions/42)
 
 3. 参考[客户端配置](config_client.json)示例，修改chika.example.com为证书中包含的域名，修改10.0.0.1为VPS的IP，将文件名改为 **config.json**，与 **juicity-client.exe**，批处理文件放在同一文件夹里。
 4. 运行批处理文件。
