@@ -87,3 +87,19 @@ start /min juicity-client.exe run -c config.json
             "server_port": 50000
         },
 ```
+
+检查此处有
+
+```
+            {
+                "process_name": [ // 直连的 Windows 可执行程序
+                    "xray.exe",
+                    "hysteria.exe",
+                    "tuic.exe",
+                    "tuic-client.exe",
+                    "juicity.exe",
+                    "juicity-client.exe"
+                ],
+                "outbound": "direct"
+            },
+```
