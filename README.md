@@ -45,7 +45,7 @@ systemctl enable --now juicity-server
 ### 卸载
 
 ```
-apt remove unzip && systemctl disable --now juicity-server && rm -f /usr/local/bin/juicity-server /root/juicity-server_config.json /etc/systemd/system/juicity-server.service
+apt remove -y unzip && systemctl disable --now juicity-server && rm -f /usr/local/bin/juicity-server /root/juicity-server_config.json /etc/systemd/system/juicity-server.service
 ```
 
 ## 客户端
