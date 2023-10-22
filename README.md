@@ -82,7 +82,7 @@ apt remove -y unzip && systemctl disable --now juicity-server && rm -f /usr/loca
         },
 ```
 
-检查此处有
+检查此处有 **juicity.exe** 或 **juicity-client.exe**
 
 ```
             {
