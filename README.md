@@ -84,7 +84,7 @@ apt remove -y unzip && systemctl disable --now juicity-server && rm -f /usr/loca
 
 检查此处有 **juicity.exe** 或 **juicity-client.exe**
 
-```
+```jsonc
             {
                 "process_name": [ // 直连的 Windows 可执行程序
                     "xray.exe",
